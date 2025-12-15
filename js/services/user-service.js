@@ -9,15 +9,8 @@ class UserService {
         this.loadUser();
     }
 
-    getHeader()
-    {
-        if(this.currentUser.token) {
-            return {
-                    'Authorization': `Bearer ${this.currentUser.token}`
-            };
-        }
-
-        return {};
+    getHeaders() {
+      return { Authorization: `Bearer ${this.getToken()}` };
     }
 
     saveUser(user)
