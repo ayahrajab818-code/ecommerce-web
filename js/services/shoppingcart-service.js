@@ -14,7 +14,7 @@ class ShoppingCartService {
         axios.post(url, null, { headers })
             .then(() => {
                 // POST returns 204, so refresh cart with GET
-                return this.loadCart();
+                returns this.loadCart();
             })
             .catch(() => {
                 templateBuilder.append("error", { error: "Add to cart failed." }, "errors");
